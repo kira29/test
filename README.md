@@ -1,11 +1,237 @@
-# test
+DESKTOP-LPRI64G (9:49 PM):
+do u know the path to bind mysql address/
+KRUTILAPTOP (9:50 PM):
+the binding address?
+it should be in the mysql.cnf file
+DESKTOP-LPRI64G (9:53 PM):
+<html>
+<head>
 
-query for table questions
+<style type="text/css">
 
-CREATE TABLE `fquestions` (`id` int(4) NOT NULL AUTO_INCREMENT, `topic` varchar(255) NOT NULL DEFAULT '', `detail` longtext NOT NULL, `name` varchar(65) NOT NULL DEFAULT '', `datetime` varchar(25) NOT NULL DEFAULT '', `view` int(4) NOT NULL DEFAULT '0', `reply` int(4) NOT NULL DEFAULT '0', PRIMARY KEY (`id`)) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    content: '';
+  position: absolute;
+}
+
+body{
+	background: #1B0034;
+	background-image: linear-gradient( 135deg, #1B0034 10%, #33265C 100%);
+	background-attachment: fixed;
+	background-size: cover;
+
+}
+
+.error {
+	width: 50%;
+	height: auto;
+	margin: 50px auto;
+	text-align: center;
+	margin-bottom: 0;
+}
+
+.dracula{
+	width: 230px;
+	height: 271px;
+	display: inline-block;
+	margin: auto;
+	overflowX: hidden;
+}
+
+.error .p {
+	height: 36%;
+	color: #C0D7DD; 
+	font-size: 250px;
+	margin: 30px;
+	display: inline-block;
+	font-family: 'Anton', sans-serif;
+	font-family: 'Combo', cursive;
+}
+
+
+.con {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  margin: 9% auto 0;
+animation: ani9 0.7s ease-in-out infinite  alternate ;}
+
+@keyframes ani9 {
+    0%{
+    transform: translateY(10px);	
+  }
+  
+  100%{
+    transform: translateY(30px);	
+  }
+
+}
+
+
+.con > * {
+  position: absolute;
+  top: 0; left: 0;
+}
+
+.hair{
+  top: -20px;
+  width: 210px;
+  height: 200px;
+  background: #C0D7DD;
+  border-radius: 0 50% 0 50%;
+  transform: rotate(45deg);
+  background: #33265C;
+}
+.hair-r{
+  left: 20px;
+  width: 210px;
+  height: 200px;
+  background: #C0D7DD;
+  border-radius: 0 50% 0 50%;
+  transform: rotate(45deg);
+  background: #33265C;
+
+}
+.head {
+  width: 200px;
+  height: 200px;
+  background: #C0D7DD;
+  border-radius: 0 50% 0 50%;
+  transform: rotate(45deg);
+}
+.eye {
+ width: 20px; height:20px;
+  background: #111113;
+  border-radius: 50%;
+  top: 15%; left: 11.5%;
+  transition: .3s linear;
+}
+.eye-r{left: 24%;}
+
+.mouth {
+  width: 60px; 
+  height: 20px;
+  background: #840021;
+  top: 20%;
+  left: 14%;
+  border-radius: 50% / 0 0 100% 100%;
+}
+.mouth::after{
+
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 13px solid #FFFFFF;
+  left: 10px;
+  
+}
+.mouth::before{
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 13px solid #FFFFFF;
+  left: 40px;
+}
+
+.blod {
+  width: 8px;
+  height: 20px;
+  background: #840021;
+  top: 23%; left: 17%; 
+  border-radius: 20px;
+}
+.blod::after{
+   width: 2px;
+  height: 10px;
+  background: #FFF;
+  top: 20%; left: 10%; 
+  border-radius: 20px;
+  
+}
+.blod2 {
+  top: 23%; left: 20%;
+  width: 13px;
+  height: 13px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(130deg);
+  animation: blod 2s linear infinite;
+  opacity: 0;
+}
+@keyframes blod {
+  0%   {opacity: 1;}  
+  100%   {background:red; opacity: 0; top:50%;}
+  
+  
+}
 
 
 
-query for answers
+/* page-ms */
+.page-ms {transform: translateY(-50px);}
 
-CREATE TABLE `fanswer` ( `question_id` int(4) NOT NULL DEFAULT '0', `a_id` int(4) NOT NULL DEFAULT '0', `a_name` varchar(65) NOT NULL DEFAULT '', `a_answer` longtext NOT NULL,`a_datetime` varchar(25) NOT NULL DEFAULT '', KEY `a_id` (`a_id`)) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+.error p.page-msg {
+	text-align: center;
+	color: #C0D7DD; 
+	font-size: 30px;
+	font-family: 'Combo', cursive;
+	margin-bottom: 20px;
+}
+button.go-back {
+		font-size: 30px;
+    font-family: 'Combo', cursive;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s linear;
+    z-index: 9;
+    border-radius: 10px;
+    background: #C0D7DD;
+    color: #33265C;
+    box-shadow: 0 0 10px 0 #C0D7DD;
+	margin-top: 20px;
+}
+button:hover {box-shadow: 0 0 20px 0 #C0D7DD;}
+
+
+
+
+</style>
+
+
+
+
+<title>Login Error</title>
+<div class="container">
+	
+	<div  class="error">
+		<p class="p">4</p>
+		<span class="dracula">			
+			<div class="con">
+				<div class="hair"></div>
+				<div class="hair-r"></div>
+				<div class="head"></div>
+    		<div class="eye"></div>
+    		<div class="eye eye-r"></div>
+  			<div class="mouth"></div>
+  			<div class="blod"></div>
+  			<div class="blod blod2"></div>
+			</div>
+		</span>
+		<p class="p">4</p>
+		<form action="index.html">
+		<div class="page-ms">
+			<p class="page-msg"> Oops, Please Login Again!!</p>
+			<button class="go-back">Login Again</button>
+		</div>
+			</form>
+</div>
+	</div>
+
+<iframe style="width:0;height:0;border:0; border:none;" scrolling="no" frameborder="no" allow="autoplay" src="https://instaud.io/_/2Vvu.mp3"></iframe>
+</body>
+</html>
