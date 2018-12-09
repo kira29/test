@@ -1,9 +1,3 @@
-DESKTOP-LPRI64G (9:49 PM):
-do u know the path to bind mysql address/
-KRUTILAPTOP (9:50 PM):
-the binding address?
-it should be in the mysql.cnf file
-DESKTOP-LPRI64G (9:53 PM):
 <html>
 <head>
 
