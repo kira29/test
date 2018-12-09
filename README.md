@@ -3,229 +3,115 @@
 
 <style type="text/css">
 
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+body {
+  background-color: #2F3242;
 }
-
-*::before,
-*::after {
-    content: '';
+svg {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -250px;
+  margin-left: -400px;
 }
-
-body{
-	background: #1B0034;
-	background-image: linear-gradient( 135deg, #1B0034 10%, #33265C 100%);
-	background-attachment: fixed;
-	background-size: cover;
-
-}
-
-.error {
-	width: 50%;
-	height: auto;
-	margin: 50px auto;
-	text-align: center;
-	margin-bottom: 0;
-}
-
-.dracula{
-	width: 230px;
-	height: 271px;
-	display: inline-block;
-	margin: auto;
-	overflowX: hidden;
-}
-
-.error .p {
-	height: 36%;
-	color: #C0D7DD; 
-	font-size: 250px;
-	margin: 30px;
-	display: inline-block;
-	font-family: 'Anton', sans-serif;
-	font-family: 'Combo', cursive;
-}
-
-
-.con {
-  width: 500px;
-  height: 500px;
-  position: relative;
-  margin: 9% auto 0;
-animation: ani9 0.7s ease-in-out infinite  alternate ;}
-
-@keyframes ani9 {
-    0%{
-    transform: translateY(10px);	
-  }
-  
-  100%{
-    transform: translateY(30px);	
-  }
-
-}
-
-
-.con > * {
+.message-box {
+  height: 200px;
+  width: 380px;
   position: absolute;
-  top: 0; left: 0;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: 50px;
+  color: #FFF;
+  font-family: Roboto;
+  font-weight: 300;
+}
+.message-box h1 {
+  font-size: 60px;
+  line-height: 46px;
+  margin-bottom: 40px;
+}
+.buttons-con .action-link-wrap {
+  margin-top: 40px;
+}
+.buttons-con .action-link-wrap a {
+  background: #68c950;
+  padding: 8px 25px;
+  border-radius: 4px;
+  color: #FFF;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  text-decoration: none;
+  margin-right: 10px
+}
+.buttons-con .action-link-wrap a:hover {
+  background: #5A5C6C;
+  color: #fff;
 }
 
-.hair{
-  top: -20px;
-  width: 210px;
-  height: 200px;
-  background: #C0D7DD;
-  border-radius: 0 50% 0 50%;
-  transform: rotate(45deg);
-  background: #33265C;
+#Polygon-1 , #Polygon-2 , #Polygon-3 , #Polygon-4 , #Polygon-4, #Polygon-5 {
+  animation: float 1s infinite ease-in-out alternate;
 }
-.hair-r{
-  left: 20px;
-  width: 210px;
-  height: 200px;
-  background: #C0D7DD;
-  border-radius: 0 50% 0 50%;
-  transform: rotate(45deg);
-  background: #33265C;
-
+#Polygon-2 {
+  animation-delay: .2s; 
 }
-.head {
-  width: 200px;
-  height: 200px;
-  background: #C0D7DD;
-  border-radius: 0 50% 0 50%;
-  transform: rotate(45deg);
+#Polygon-3 {
+  animation-delay: .4s; 
 }
-.eye {
- width: 20px; height:20px;
-  background: #111113;
-  border-radius: 50%;
-  top: 15%; left: 11.5%;
-  transition: .3s linear;
+#Polygon-4 {
+  animation-delay: .6s; 
 }
-.eye-r{left: 24%;}
-
-.mouth {
-  width: 60px; 
-  height: 20px;
-  background: #840021;
-  top: 20%;
-  left: 14%;
-  border-radius: 50% / 0 0 100% 100%;
-}
-.mouth::after{
-
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 13px solid #FFFFFF;
-  left: 10px;
-  
-}
-.mouth::before{
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 13px solid #FFFFFF;
-  left: 40px;
+#Polygon-5 {
+  animation-delay: .8s; 
 }
 
-.blod {
-  width: 8px;
-  height: 20px;
-  background: #840021;
-  top: 23%; left: 17%; 
-  border-radius: 20px;
+@keyframes float {
+	100% {
+    transform: translateY(20px);
+  }
 }
-.blod::after{
-   width: 2px;
-  height: 10px;
-  background: #FFF;
-  top: 20%; left: 10%; 
-  border-radius: 20px;
-  
+@media (max-width: 450px) {
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -190px;
+  }
+  .message-box {
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -190px;
+    text-align: center;
+  }
 }
-.blod2 {
-  top: 23%; left: 20%;
-  width: 13px;
-  height: 13px;
-  border-radius: 50% 50% 50% 0;
-  transform: rotate(130deg);
-  animation: blod 2s linear infinite;
-  opacity: 0;
-}
-@keyframes blod {
-  0%   {opacity: 1;}  
-  100%   {background:red; opacity: 0; top:50%;}
-  
-  
-}
-
-
-
-/* page-ms */
-.page-ms {transform: translateY(-50px);}
-
-.error p.page-msg {
-	text-align: center;
-	color: #C0D7DD; 
-	font-size: 30px;
-	font-family: 'Combo', cursive;
-	margin-bottom: 20px;
-}
-button.go-back {
-		font-size: 30px;
-    font-family: 'Combo', cursive;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: 0.3s linear;
-    z-index: 9;
-    border-radius: 10px;
-    background: #C0D7DD;
-    color: #33265C;
-    box-shadow: 0 0 10px 0 #C0D7DD;
-	margin-top: 20px;
-}
-button:hover {box-shadow: 0 0 20px 0 #C0D7DD;}
-
-
-
 
 </style>
 
 
 
-
 <title>Login Error</title>
-<div class="container">
-	
-	<div  class="error">
-		<p class="p">4</p>
-		<span class="dracula">			
-			<div class="con">
-				<div class="hair"></div>
-				<div class="hair-r"></div>
-				<div class="head"></div>
-    		<div class="eye"></div>
-    		<div class="eye eye-r"></div>
-  			<div class="mouth"></div>
-  			<div class="blod"></div>
-  			<div class="blod blod2"></div>
-			</div>
-		</span>
-		<p class="p">4</p>
-		<form action="index.html">
-		<div class="page-ms">
-			<p class="page-msg"> Oops, Please Login Again!!</p>
-			<button class="go-back">Login Again</button>
-		</div>
-			</form>
-</div>
-	</div>
 
-<iframe style="width:0;height:0;border:0; border:none;" scrolling="no" frameborder="no" allow="autoplay" src="https://instaud.io/_/2Vvu.mp3"></iframe>
+<svg width="380px" height="500px" viewBox="0 0 837 1045" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M353,9 L626.664028,170 L626.664028,487 L353,642 L79.3359724,487 L79.3359724,170 L353,9 Z" id="Polygon-1" stroke="#007FB2" stroke-width="6" sketch:type="MSShapeGroup"></path>
+        <path d="M78.5,529 L147,569.186414 L147,648.311216 L78.5,687 L10,648.311216 L10,569.186414 L78.5,529 Z" id="Polygon-2" stroke="#EF4A5B" stroke-width="6" sketch:type="MSShapeGroup"></path>
+        <path d="M773,186 L827,217.538705 L827,279.636651 L773,310 L719,279.636651 L719,217.538705 L773,186 Z" id="Polygon-3" stroke="#795D9C" stroke-width="6" sketch:type="MSShapeGroup"></path>
+        <path d="M639,529 L773,607.846761 L773,763.091627 L639,839 L505,763.091627 L505,607.846761 L639,529 Z" id="Polygon-4" stroke="#F2773F" stroke-width="6" sketch:type="MSShapeGroup"></path>
+        <path d="M281,801 L383,861.025276 L383,979.21169 L281,1037 L179,979.21169 L179,861.025276 L281,801 Z" id="Polygon-5" stroke="#36B455" stroke-width="6" sketch:type="MSShapeGroup"></path>
+    </g>
+</svg>
+<div class="message-box">
+  <h1>Login Error!</h1>
+  <p>Login Again!! Wrong Username or Password</p>
+  <div class="buttons-con">
+    <div class="action-link-wrap">
+      <a href="index.html" class="link-button">Go to Login Page</a>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
